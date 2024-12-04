@@ -1,0 +1,43 @@
+﻿@page
+@model GolfBookingSystem.Models.BookingViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Slot</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book a Golf Slot</h1>
+        <form id="bookForm" method="post" asp-page-handler="BookSlot">
+            <div class="form-group">
+                <label for="golferName">Golfer Name</label>
+                <input type="text" class="form-control" id="golferName" asp-for="GolferName" required>
+            </div>
+            <div class="form-group">
+                <label for="courseSelect">Select Course</label>
+                <select class="form-control" id="courseSelect" asp-for="CourseId" required>
+                    <option value="1">Course 1</option>
+                    <option value="2">Course 2</option>
+                    <option value="3">Course 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="timeSlotSelect">Select Time Slot</label>
+                <select class="form-control" id="timeSlotSelect" asp-for="SelectedTime" required>
+                    <!-- Options will be populated dynamically via JavaScript -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Book Slot</button>
+        </form>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/scripts.js"></script>
+</body>
+</html>
