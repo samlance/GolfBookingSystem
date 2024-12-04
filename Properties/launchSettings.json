@@ -28,10 +28,10 @@
   },
   "$schema": "https://json.schemastore.org/launchsettings.json",
   "iisSettings": {
-    "windowsAuthentication": false,
+    "windowsAuthentication": true,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:56381/",
+      "applicationUrl": "https://localhost:44349/",
       "sslPort": 44349
     }
   }
